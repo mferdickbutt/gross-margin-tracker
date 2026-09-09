@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gross margin tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <h1>Gross margin tracker</h1>
+        <p class="lede">Product-line × month gross margin for a public dataset of
+          5 lines across 12 months.
+          First paint is the table below — no JavaScript required.
+          Company target is 45.0%.</p>
+      </div>
+      <dl class="formula">
+        <dt>Formula</dt>
+        <dd>GM$ = revenue − COGS</dd>
+        <dd>GM% = (revenue − COGS) / revenue</dd>
+        <dd>Zero revenue → GM% is — (not 0, NaN, or Infinity)</dd>
+      </dl>
+    </header>
+
+    <section class="kpis" aria-label="Headline margins">
+      <div class="kpi above">
+        <span class="label">Overall GM%</span>
+        <span class="value">55.9%</span>
+        <span class="sub">$4,457,450 on $7,977,500 revenue</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Best line</span>
+        <span class="value">Core Platform</span>
+        <span class="sub">72.3%</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Worst line</span>
+        <span class="value">Hardware Kits</span>
+        <span class="sub">27.1%</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Best month</span>
+        <span class="value">Aug 2026</span>
+        <span class="sub">66.0%</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Worst month</span>
+        <span class="value">Dec 2025</span>
+        <span class="sub">51.3%</span>
+      </div>
+    </section>
+
+    <div class="table-wrap">
+      <table class="margin">
+        <caption>Gross margin by product line and month (baked into HTML at render time)</caption>
+        <thead>
+          <tr>
+            <th class="line" scope="col">Product line</th>
+            <th scope="col">Sep 2025<span class="amt">GM% / GM$</span></th><th scope="col">Oct 2025<span class="amt">GM% / GM$</span></th><th scope="col">Nov 2025<span class="amt">GM% / GM$</span></th><th scope="col">Dec 2025<span class="amt">GM% / GM$</span></th><th scope="col">Jan 2026<span class="amt">GM% / GM$</span></th><th scope="col">Feb 2026<span class="amt">GM% / GM$</span></th><th scope="col">Mar 2026<span class="amt">GM% / GM$</span></th><th scope="col">Apr 2026<span class="amt">GM% / GM$</span></th><th scope="col">May 2026<span class="amt">GM% / GM$</span></th><th scope="col">Jun 2026<span class="amt">GM% / GM$</span></th><th scope="col">Jul 2026<span class="amt">GM% / GM$</span></th><th scope="col">Aug 2026<span class="amt">GM% / GM$</span></th>
+            <th scope="col">Trailing 12 mo<span class="amt">GM% / GM$</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th class="line" scope="row">Core Platform<span class="amt">Target 70.0%</span></th><td class="above" title="Revenue $220,000 · COGS $66,000"><span class="pct">70.0%</span><span class="amt">$154,000</span></td><td class="above" title="Revenue $224,800 · COGS $66,600"><span class="pct">70.4%</span><span class="amt">$158,200</span></td><td class="above" title="Revenue $229,800 · COGS $67,100"><span class="pct">70.8%</span><span class="amt">$162,700</span></td><td class="above" title="Revenue $234,800 · COGS $67,600"><span class="pct">71.2%</span><span class="amt">$167,200</span></td><td class="above" title="Revenue $240,000 · COGS $68,200"><span class="pct">71.6%</span><span class="amt">$171,800</span></td><td class="above" title="Revenue $245,300 · COGS $68,700"><span class="pct">72.0%</span><span class="amt">$176,600</span></td><td class="above" title="Revenue $250,700 · COGS $69,200"><span class="pct">72.4%</span><span class="amt">$181,500</span></td><td class="above" title="Revenue $256,200 · COGS $69,700"><span class="pct">72.8%</span><span class="amt">$186,500</span></td><td class="above" title="Revenue $261,800 · COGS $70,200"><span class="pct">73.2%</span><span class="amt">$191,600</span></td><td class="above" title="Revenue $267,600 · COGS $70,600"><span class="pct">73.6%</span><span class="amt">$197,000</span></td><td class="above" title="Revenue $273,500 · COGS $71,100"><span class="pct">74.0%</span><span class="amt">$202,400</span></td><td class="above" title="Revenue $279,500 · COGS $71,600"><span class="pct">74.4%</span><span class="amt">$207,900</span></td><td class="above" title="Revenue $2,984,000 · COGS $826,600"><span class="pct">72.3%</span><span class="amt">$2,157,400</span></td></tr>
+<tr><th class="line" scope="row">Analytics Suite<span class="amt">Target 65.0%</span></th><td class="above" title="Revenue $96,000 · COGS $32,600"><span class="pct">66.0%</span><span class="amt">$63,400</span></td><td class="above" title="Revenue $99,400 · COGS $33,300"><span class="pct">66.5%</span><span class="amt">$66,100</span></td><td class="above" title="Revenue $102,800 · COGS $33,900"><span class="pct">67.0%</span><span class="amt">$68,900</span></td><td class="above" title="Revenue $106,400 · COGS $34,600"><span class="pct">67.5%</span><span class="amt">$71,800</span></td><td class="above" title="Revenue $110,200 · COGS $35,300"><span class="pct">68.0%</span><span class="amt">$74,900</span></td><td class="above" title="Revenue $114,000 · COGS $35,900"><span class="pct">68.5%</span><span class="amt">$78,100</span></td><td class="above" title="Revenue $118,000 · COGS $36,600"><span class="pct">69.0%</span><span class="amt">$81,400</span></td><td class="above" title="Revenue $122,100 · COGS $37,300"><span class="pct">69.5%</span><span class="amt">$84,800</span></td><td class="above" title="Revenue $126,400 · COGS $37,900"><span class="pct">70.0%</span><span class="amt">$88,500</span></td><td class="above" title="Revenue $130,800 · COGS $38,600"><span class="pct">70.5%</span><span class="amt">$92,200</span></td><td class="above" title="Revenue $135,400 · COGS $39,300"><span class="pct">71.0%</span><span class="amt">$96,100</span></td><td class="above" title="Revenue $140,200 · COGS $39,900"><span class="pct">71.5%</span><span class="amt">$100,300</span></td><td class="above" title="Revenue $1,401,700 · COGS $435,200"><span class="pct">69.0%</span><span class="amt">$966,500</span></td></tr>
+<tr><th class="line" scope="row">Hardware Kits<span class="amt">Target 30.0%</span></th><td class="near" title="Revenue $148,000 · COGS $106,550"><span class="pct">28.0%</span><span class="amt">$41,450</span></td><td class="below" title="Revenue $159,800 · COGS $116,700"><span class="pct">27.0%</span><span class="amt">$43,100</span></td><td class="below" title="Revenue $199,800 · COGS $147,850"><span class="pct">26.0%</span><span class="amt">$51,950</span></td><td class="near" title="Revenue $229,400 · COGS $165,150"><span class="pct">28.0%</span><span class="amt">$64,250</span></td><td class="near" title="Revenue $106,600 · COGS $77,800"><span class="pct">27.0%</span><span class="amt">$28,800</span></td><td class="below" title="Revenue $118,400 · COGS $87,600"><span class="pct">26.0%</span><span class="amt">$30,800</span></td><td class="near" title="Revenue $136,200 · COGS $98,050"><span class="pct">28.0%</span><span class="amt">$38,150</span></td><td class="below" title="Revenue $155,400 · COGS $113,450"><span class="pct">27.0%</span><span class="amt">$41,950</span></td><td class="below" title="Revenue $162,800 · COGS $120,450"><span class="pct">26.0%</span><span class="amt">$42,350</span></td><td class="near" title="Revenue $148,000 · COGS $106,550"><span class="pct">28.0%</span><span class="amt">$41,450</span></td><td class="below" title="Revenue $130,200 · COGS $95,100"><span class="pct">27.0%</span><span class="amt">$35,100</span></td><td class="na" title="Revenue $0 · COGS $0"><span class="pct">—</span><span class="amt">$0</span></td><td class="near" title="Revenue $1,694,600 · COGS $1,235,250"><span class="pct">27.1%</span><span class="amt">$459,350</span></td></tr>
+<tr><th class="line" scope="row">Professional Services<span class="amt">Target 40.0%</span></th><td class="near" title="Revenue $82,000 · COGS $50,000"><span class="pct">39.0%</span><span class="amt">$32,000</span></td><td class="near" title="Revenue $83,000 · COGS $50,600"><span class="pct">39.0%</span><span class="amt">$32,400</span></td><td class="near" title="Revenue $84,000 · COGS $51,200"><span class="pct">39.0%</span><span class="amt">$32,800</span></td><td class="near" title="Revenue $100,300 · COGS $61,200"><span class="pct">39.0%</span><span class="amt">$39,100</span></td><td class="near" title="Revenue $86,000 · COGS $52,500"><span class="pct">39.0%</span><span class="amt">$33,500</span></td><td class="near" title="Revenue $87,000 · COGS $53,100"><span class="pct">39.0%</span><span class="amt">$33,900</span></td><td class="near" title="Revenue $88,100 · COGS $53,700"><span class="pct">39.0%</span><span class="amt">$34,400</span></td><td class="near" title="Revenue $89,100 · COGS $54,400"><span class="pct">38.9%</span><span class="amt">$34,700</span></td><td class="near" title="Revenue $90,200 · COGS $55,000"><span class="pct">39.0%</span><span class="amt">$35,200</span></td><td class="near" title="Revenue $107,700 · COGS $65,700"><span class="pct">39.0%</span><span class="amt">$42,000</span></td><td class="near" title="Revenue $92,400 · COGS $56,400"><span class="pct">39.0%</span><span class="amt">$36,000</span></td><td class="near" title="Revenue $93,500 · COGS $57,000"><span class="pct">39.0%</span><span class="amt">$36,500</span></td><td class="near" title="Revenue $1,083,300 · COGS $660,800"><span class="pct">39.0%</span><span class="amt">$422,500</span></td></tr>
+<tr><th class="line" scope="row">Cloud Storage<span class="amt">Target 55.0%</span></th><td class="near" title="Revenue $58,000 · COGS $27,800"><span class="pct">52.1%</span><span class="amt">$30,200</span></td><td class="near" title="Revenue $59,600 · COGS $28,300"><span class="pct">52.5%</span><span class="amt">$31,300</span></td><td class="near" title="Revenue $61,300 · COGS $28,700"><span class="pct">53.2%</span><span class="amt">$32,600</span></td><td class="near" title="Revenue $63,000 · COGS $29,100"><span class="pct">53.8%</span><span class="amt">$33,900</span></td><td class="near" title="Revenue $64,800 · COGS $29,500"><span class="pct">54.5%</span><span class="amt">$35,300</span></td><td class="near" title="Revenue $66,600 · COGS $30,000"><span class="pct">55.0%</span><span class="amt">$36,600</span></td><td class="above" title="Revenue $68,500 · COGS $30,400"><span class="pct">55.6%</span><span class="amt">$38,100</span></td><td class="above" title="Revenue $70,400 · COGS $30,800"><span class="pct">56.3%</span><span class="amt">$39,600</span></td><td class="above" title="Revenue $72,300 · COGS $31,300"><span class="pct">56.7%</span><span class="amt">$41,000</span></td><td class="above" title="Revenue $74,400 · COGS $31,700"><span class="pct">57.4%</span><span class="amt">$42,700</span></td><td class="above" title="Revenue $76,400 · COGS $32,100"><span class="pct">58.0%</span><span class="amt">$44,300</span></td><td class="above" title="Revenue $78,600 · COGS $32,500"><span class="pct">58.7%</span><span class="amt">$46,100</span></td><td class="above" title="Revenue $813,900 · COGS $362,200"><span class="pct">55.5%</span><span class="amt">$451,700</span></td></tr>
+          <tr class="totals">
+            <th class="line" scope="row">Monthly total
+              <span class="amt">Company target 45.0%</span>
+            </th>
+            <td class="above" title="Revenue $604,000 · COGS $282,950"><span class="pct">53.2%</span><span class="amt">$321,050</span></td><td class="above" title="Revenue $626,600 · COGS $295,500"><span class="pct">52.8%</span><span class="amt">$331,100</span><span class="mom">-0.3 pp MoM</span></td><td class="above" title="Revenue $677,700 · COGS $328,750"><span class="pct">51.5%</span><span class="amt">$348,950</span><span class="mom">-1.4 pp MoM</span></td><td class="above" title="Revenue $733,900 · COGS $357,650"><span class="pct">51.3%</span><span class="amt">$376,250</span><span class="mom">-0.2 pp MoM</span></td><td class="above" title="Revenue $607,600 · COGS $263,300"><span class="pct">56.7%</span><span class="amt">$344,300</span><span class="mom">+5.4 pp MoM</span></td><td class="above" title="Revenue $631,300 · COGS $275,300"><span class="pct">56.4%</span><span class="amt">$356,000</span><span class="mom">-0.3 pp MoM</span></td><td class="above" title="Revenue $661,500 · COGS $287,950"><span class="pct">56.5%</span><span class="amt">$373,550</span><span class="mom">+0.1 pp MoM</span></td><td class="above" title="Revenue $693,200 · COGS $305,650"><span class="pct">55.9%</span><span class="amt">$387,550</span><span class="mom">-0.6 pp MoM</span></td><td class="above" title="Revenue $713,500 · COGS $314,850"><span class="pct">55.9%</span><span class="amt">$398,650</span><span class="mom">-0.0 pp MoM</span></td><td class="above" title="Revenue $728,500 · COGS $313,150"><span class="pct">57.0%</span><span class="amt">$415,350</span><span class="mom">+1.1 pp MoM</span></td><td class="above" title="Revenue $707,900 · COGS $294,000"><span class="pct">58.5%</span><span class="amt">$413,900</span><span class="mom">+1.5 pp MoM</span></td><td class="above" title="Revenue $591,800 · COGS $201,000"><span class="pct">66.0%</span><span class="amt">$390,800</span><span class="mom">+7.6 pp MoM</span></td>
+            <td class="above" title="Revenue $7,977,500 · COGS $3,520,050"><span class="pct">55.9%</span><span class="amt">$4,457,450</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="legend">
+      Cell color vs that row’s target:
+      <span><i class="swatch above"></i> at or above</span>
+      <span><i class="swatch near"></i> within 3 pp</span>
+      <span><i class="swatch below"></i> more than 3 pp below</span>
+      · Hover a cell for revenue and COGS.
+    </p>
+
+    <section class="insights" aria-label="Trends">
+      <article class="insight">
+        <h2>Best / worst</h2>
+        <p>Strongest line: Core Platform at 72.3%. Weakest line: Hardware Kits at 27.1%. Strongest month: Aug 2026 at 66.0%. Weakest month: Dec 2025 at 51.3%.</p>
+      </article>
+      <article class="insight">
+        <h2>MoM on company total</h2>
+        <p>Monthly total cells show percentage-point change vs the prior month. Hardware Kits is at zero revenue in Aug 2026 (paused), so that cell’s GM% is —.</p>
+      </article>
+      <article class="insight">
+        <h2>Updated</h2>
+        <p>Dataset dated 2026-09-01. Currency USD. Re-render with <code>node scripts/render-static.js</code>.</p>
+      </article>
+    </section>
+
+    <p class="notes">Source: <a href="data/margin.json"><code>data/margin.json</code></a>. Optional JS only toggles % / $ density — it does not fetch or replace this table.</p>
+
+    <div class="js-only" hidden>
+      <span>View:</span>
+      <button type="button" data-view="both" aria-pressed="true">% and $</button>
+      <button type="button" data-view="pct" aria-pressed="false">GM% only</button>
+      <button type="button" data-view="amt" aria-pressed="false">GM$ only</button>
+    </div>
+  </div>
+  <script type="application/json" id="margin-data">{"schemaVersion":1,"currency":"USD","targetGrossMarginPct":0.45,"updatedAt":"2026-09-01","description":"Public gross-margin tracker for five named product lines across twelve fiscal months (Sep 2025–Aug 2026). Each cell stores revenue and COGS in USD. Gross margin dollars = revenue − COGS. Gross margin percent = (revenue − COGS) / revenue when revenue ≠ 0; otherwise null. Company target GM% is 45%; lines may override.","lines":[{"id":"core-platform","name":"Core Platform","targetGrossMarginPct":0.7},{"id":"analytics-suite","name":"Analytics Suite","targetGrossMarginPct":0.65},{"id":"hardware-kits","name":"Hardware Kits","targetGrossMarginPct":0.3},{"id":"professional-services","name":"Professional Services","targetGrossMarginPct":0.4},{"id":"cloud-storage","name":"Cloud Storage","targetGrossMarginPct":0.55}],"periods":[{"id":"2025-09","label":"Sep 2025","cells":{"core-platform":{"revenue":220000,"cogs":66000},"analytics-suite":{"revenue":96000,"cogs":32600},"hardware-kits":{"revenue":148000,"cogs":106550},"professional-services":{"revenue":82000,"cogs":50000},"cloud-storage":{"revenue":58000,"cogs":27800}}},{"id":"2025-10","label":"Oct 2025","cells":{"core-platform":{"revenue":224800,"cogs":66600},"analytics-suite":{"revenue":99400,"cogs":33300},"hardware-kits":{"revenue":159800,"cogs":116700},"professional-services":{"revenue":83000,"cogs":50600},"cloud-storage":{"revenue":59600,"cogs":28300}}},{"id":"2025-11","label":"Nov 2025","cells":{"core-platform":{"revenue":229800,"cogs":67100},"analytics-suite":{"revenue":102800,"cogs":33900},"hardware-kits":{"revenue":199800,"cogs":147850},"professional-services":{"revenue":84000,"cogs":51200},"cloud-storage":{"revenue":61300,"cogs":28700}}},{"id":"2025-12","label":"Dec 2025","cells":{"core-platform":{"revenue":234800,"cogs":67600},"analytics-suite":{"revenue":106400,"cogs":34600},"hardware-kits":{"revenue":229400,"cogs":165150},"professional-services":{"revenue":100300,"cogs":61200},"cloud-storage":{"revenue":63000,"cogs":29100}}},{"id":"2026-01","label":"Jan 2026","cells":{"core-platform":{"revenue":240000,"cogs":68200},"analytics-suite":{"revenue":110200,"cogs":35300},"hardware-kits":{"revenue":106600,"cogs":77800},"professional-services":{"revenue":86000,"cogs":52500},"cloud-storage":{"revenue":64800,"cogs":29500}}},{"id":"2026-02","label":"Feb 2026","cells":{"core-platform":{"revenue":245300,"cogs":68700},"analytics-suite":{"revenue":114000,"cogs":35900},"hardware-kits":{"revenue":118400,"cogs":87600},"professional-services":{"revenue":87000,"cogs":53100},"cloud-storage":{"revenue":66600,"cogs":30000}}},{"id":"2026-03","label":"Mar 2026","cells":{"core-platform":{"revenue":250700,"cogs":69200},"analytics-suite":{"revenue":118000,"cogs":36600},"hardware-kits":{"revenue":136200,"cogs":98050},"professional-services":{"revenue":88100,"cogs":53700},"cloud-storage":{"revenue":68500,"cogs":30400}}},{"id":"2026-04","label":"Apr 2026","cells":{"core-platform":{"revenue":256200,"cogs":69700},"analytics-suite":{"revenue":122100,"cogs":37300},"hardware-kits":{"revenue":155400,"cogs":113450},"professional-services":{"revenue":89100,"cogs":54400},"cloud-storage":{"revenue":70400,"cogs":30800}}},{"id":"2026-05","label":"May 2026","cells":{"core-platform":{"revenue":261800,"cogs":70200},"analytics-suite":{"revenue":126400,"cogs":37900},"hardware-kits":{"revenue":162800,"cogs":120450},"professional-services":{"revenue":90200,"cogs":55000},"cloud-storage":{"revenue":72300,"cogs":31300}}},{"id":"2026-06","label":"Jun 2026","cells":{"core-platform":{"revenue":267600,"cogs":70600},"analytics-suite":{"revenue":130800,"cogs":38600},"hardware-kits":{"revenue":148000,"cogs":106550},"professional-services":{"revenue":107700,"cogs":65700},"cloud-storage":{"revenue":74400,"cogs":31700}}},{"id":"2026-07","label":"Jul 2026","cells":{"core-platform":{"revenue":273500,"cogs":71100},"analytics-suite":{"revenue":135400,"cogs":39300},"hardware-kits":{"revenue":130200,"cogs":95100},"professional-services":{"revenue":92400,"cogs":56400},"cloud-storage":{"revenue":76400,"cogs":32100}}},{"id":"2026-08","label":"Aug 2026","cells":{"core-platform":{"revenue":279500,"cogs":71600},"analytics-suite":{"revenue":140200,"cogs":39900},"hardware-kits":{"revenue":0,"cogs":0},"professional-services":{"revenue":93500,"cogs":57000},"cloud-storage":{"revenue":78600,"cogs":32500}}}]}</script>
+  <script src="js/margin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
